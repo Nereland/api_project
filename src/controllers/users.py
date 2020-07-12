@@ -1,13 +1,13 @@
 from src.app import app
 from flask import json
 from pymongo import MongoClient
-from src.config import DB_URL
+from src.config import DB_URL, DB_NAME
 from flask import request
 from src.helpers.errorHelpers import errorHelper, APIError, checkValidParams # Error404,
 from src.helpers.apiResponse import data
 from src.helpers.apiValidations import validateUsername
 
-dbUser = MongoClient(DB_URL).get_database('sentimentApi').users
+dbUser = MongoClient(DB_URL).get_database(DB_NAME).users
 print(f"connected to db {DB_URL}")
 # messages = client.get_default_database()["messages"]
 
