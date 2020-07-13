@@ -96,35 +96,3 @@ def get_chat(room):
     return {"messages":messages}
 
 
-
-
-"""
-def validateUserinRoom(username):
-    print("validateUserinRoom==", username)
-    if dbChat.find({"users.user_name":{"$eq":username}}).limit(1).count() == 0:
-        raise Exception ("This user is not in this room, try with another")
-    return False
-
-
-
-@app.route("/chat/<room>/addmessages", methods=['POST'])
-def add_messages(room):
-    print("To add a message to a user in room", room)
-    
-    messagesReq = request.json["message"]
-    messageArray = []
-    
-    for message in messagesReq:
-        print(message)
-        if validateUserinRoom(message["name"]) == False:     
-            messageArray.append(message)
-
-    #messages = dbChat.find_one({"room": {"$eq":room}}) #['messages']
-    #messages += messageArray
-    #print(messageArray)
-    #chatId = dbChat.update_one({"room": {"$eq":room}}, {'$set':{"messages": messageArray}})
-    return {"messages": messageArray}
-
-
-
-"""
