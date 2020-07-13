@@ -4,7 +4,6 @@ from pymongo import MongoClient
 from src.config import DB_URL
 from flask import request
 import re
-from src.helpers.errorHelpers import errorHelper, APIError, checkValidParams # Error404,
 from src.helpers.apiResponse import data
 
 client = MongoClient(DB_URL)
@@ -14,3 +13,4 @@ print(f"connected to db {DB_URL}")
 @app.route("/user/<user_id>/recommend`", methods=['GET'])
 def recomendations():
     return #json array with 3 top similar users
+
