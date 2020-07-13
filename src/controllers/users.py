@@ -8,14 +8,14 @@ from src.helpers.apiResponse import data
 from src.helpers.apiValidations import validateUsername
 
 dbUser = MongoClient(DB_URL).get_database(DB_NAME).users
-print(f"connected to db {DB_URL}")
+print(f"connected to users db {DB_URL}")
 # messages = client.get_default_database()["messages"]
 
 @errorHelper
 @app.route("/user/create/<username>", methods=['POST'])
 def create_user(username): 
     print("Request to create user with username: ", username)
-    if (validateUsername(username) == False):
+    if validateUsername(username) == False:
         user = dbUser.insert({"user_name": username})
         res = {"user_id": str(user)}
     else:
