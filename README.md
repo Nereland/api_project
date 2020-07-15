@@ -1,17 +1,14 @@
 # Sentiment recognizer API
 
-Animated films are usally considered a "children thing"... 
-![MONONOKE](/assets/MONONOKE.jpg)
-but we all know is not such, don't we? 
-
-![ghost](/assets/ghost.jpg)
-
-However, even when we talk about animated films for children, there are all types of feelings that it's worth to realize. They help children(and adults) to understand grief, happinesss, fear, sadness..
+Animated films are usally considered a **"children thing"...**
 
 ![MONONOKE2](/assets/MONONOKE2.jpeg)
 
+But we all know is not such, don't we? 
+However, even when we talk about animated films for children, there are all types of feelings that it's worth to realize. They help children(and adults) to understand grief, happinesss, fear, sadness..
 I created an API to recognize feelings, and for this I chose a small piece of a very well known children film... 
-![all](/assets/all.jpg)
+                            ![all](/assets/all.jpg)
+
 I have no doubt all of you can recognize this image, and, if you have seen the film, you will also recognize that you were not neutral to Simba's adventures... some of them amazing, some of them scary, others really sad... 
 
 
@@ -23,6 +20,7 @@ By using [Flask](https://flask.palletsprojects.com/en/1.1.x/) I created this API
 ### Inserting main characters
 
 First of all, With "POST" method, I created users, for the sake of simplicity, I  chose just of them 
+
 ![CHARACTERS](/assets/CHARACTERS.png)
 
 By doing defensive programming, I made sure each character was inserted only once in the database, in case it was already there, an infomative messages would come up.
@@ -30,13 +28,12 @@ By doing defensive programming, I made sure each character was inserted only onc
 ### Chats/conversations 
 
 Then, also using "POST", I created four chats:
-**Birth**,
+**Birth, Growing up, Elephant Graveyard and Hakuna Matata** 
+
+
 ![scar](/assets/scar.jpg)
 
- **Growing up, Elephant Graveyard and Hakuna Matata** 
 
-
-![growing_up](/assets/growing_up.png)
 
 ### Messages/Dialogues
 
@@ -63,7 +60,9 @@ When I analysed the **Elephant Graveyard** chat... the general sentiments were a
            ![elephant_graveyard](/assets/elephant_graveyard.jpeg)
 
 
-And... what do you think about **Hakuna Matata** room?? As you may have thought, the polarity is mainly positive (0.093)
+And... what do you think about **Hakuna Matata** room?? As you may have thought, the polarity is mainly positive (0.093
 
+
+![growing_up](/assets/growing_up.png)
 
 
